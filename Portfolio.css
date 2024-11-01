@@ -1,0 +1,826 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: "Merriweather", serif;
+    /* font-weight: 800; */
+    /* font-style: italic; */
+}
+ 
+body{
+    color:white;
+}
+.back{ 
+    background-color: #081b29; 
+}
+/* ....................................................................................  */
+
+.header{ /* nav-bar container */ 
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding : 10px 10%;
+    background: transparent;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background-color: cyan;
+    
+}
+.logo{ /* portfolio aimation */
+    position:relative;
+    font-size: 30px;
+    color:black;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    /* background-color:deeppink */
+}
+.navbar a{ /* nav-bar other containers */ 
+    display: inline-block;
+    font-size: 25px;
+    color:black;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    animation: slidTop .5s ease forwards;
+}
+.navbar a:hover{ /*nav-bar click animation */
+    color:brown;
+    text-shadow: 0 0 5px cyan,0 0 25px cyan, 0 0 50px cyan,0 0 100px cyan,0 0 200px cyan;
+}
+.home{ /* name container */
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: transparent;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+.home-content{ /*  sub-home content */
+    max-width: 600px;
+}
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    animation: slideBottom 1s ease forwards;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+}
+.home-content h3 span{
+    color: cyan;
+}
+.home-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+    animation-delay:  1s;
+}
+.home-content p{
+    font-size: 20px;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+}
+.home-sci .github{
+     display: inline-flex;
+     justify-content: center;
+     align-items: center;
+     width: 40px;
+     height: 40px;
+     background: transparent;
+     border: 0.75px solid white;
+     border-radius: 50%;
+     font-size: 25px;
+     background-color: #070707;
+     text-decoration: none;
+     color: white;
+     transition: slideLeft .5s ease forwards;
+     animation-delay: calc(.2s * var(--i));
+     margin: 30px 15px 30px 0;
+     box-shadow: 0 0 5px rgb(12, 12, 12) , 0 0 25px rgb(4, 4, 4) ;
+
+}
+.home-sci .github:hover{
+    background: #070707;
+    color: white;
+    box-shadow: 0 0 20px white;
+}
+.home-sci .instagram{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: transparent;
+    border: 0.75px solid white;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color:#f94c10;
+    text-decoration: none;
+    transition: slideLeft .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+    box-shadow: 0 0 5px #f94c10 , 0 0 25px #f94c10 ;
+
+}
+.home-sci .instagram:hover{
+   background: #f94c10;
+   color: white;
+   box-shadow: 0 0 20px white;
+}
+.home-sci .whatsapp{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: white;
+    background: transparent;
+    border: 0.75px solid white;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: green;
+    text-decoration: none;
+    transition: slideLeft .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+    box-shadow: 0 0 5px green , 0 0 25px green ;
+}
+.home-sci .whatsapp:hover{
+   background: green;
+   color: white;
+   box-shadow: 0 0 20px white;
+}
+.home-sci .linkedin{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0.75px solid white;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: #0077B5;
+    text-decoration: none;
+    color: white;
+    transition: slideLeft .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+    box-shadow: 0 0 5px #0077B5 , 0 0 25px #0077B5 ;
+
+}
+.home-sci .linkedin:hover{
+   background: #0077B5;
+   color: white;
+   box-shadow: 0 0 20px white;
+}
+
+.btn-box{ /* about me button */
+    display: inline-block;
+    padding: 12px 28px;
+    background: cyan;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    animation: slidTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px cyan , 0 0 25px cyan ;
+}
+.btn-box:hover{ /* about me button animation*/
+    box-shadow: 0 0 5px black,0 0 25px black, 0 0 10px cyan,0 0 10px cyan,0 0 20px cyan,0 0 30px cyan;
+}
+#downloadcv {
+    display: inline-block;
+    padding: 12px 28px;
+    margin-left: 20px;
+    background: cyan;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    animation: slidTop 1s ease forwards;
+    animation-delay: 2s;
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan;
+}
+#downloadcv:hover{ /* about me button animation*/
+    box-shadow: 0 0 5px black,0 0 25px black, 0 0 10px cyan,0 0 10px cyan,0 0 20px cyan,0 0 30px cyan;
+}
+/*.................................................................*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.836),0 8px 16px 0 rgba(255, 255, 255, 0.801);
+    width: 380px;
+    margin-left: 100px ;
+    text-align: center;
+    border-radius: 20px;
+    background-color: #F3F8FF;
+   
+  }
+.card h1{
+    color: black;
+  }
+.card p{
+    color: black;
+  }
+.img {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+.title {
+    color: black;
+    font-size: 18px;
+  }
+  
+.contactbutton {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 0 0 20px  20px ;
+  }
+.contactbutton:hover{
+    box-shadow: 0 0 5px black,0 0 25px black, 0 0 10px cyan,0 0 10px cyan,0 0 20px cyan,0 0 30px cyan;
+    /* color: black; */
+}
+.card  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: white;
+  }
+
+@keyframes slideRight {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+} 
+@keyframes slideLeft {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+} 
+@keyframes slideTop {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideBottom {
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+/*----------------------------------------------------------------*/
+
+.about{ /* about me main container */
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.about-text h2{
+    font-size: 60px;
+   text-align: center;
+}
+.about-text h2 span{
+    color: white;
+    
+}
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: white;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+    text-align: center;
+}
+.about-text p{
+    color:white;
+    margin-left: 40px;
+    font-size: 25px;
+    line-height: 1.4;
+    margin-bottom: 4rem;
+}
+#btn-box{ /* about me button */
+    margin-left: 530px;
+}
+/*----------------------------------------------------------------*/
+.skills-container{
+    width: 100%;
+    height: 100%;
+}
+.heading{
+    font-size: 80px;
+    margin-top: 60px;
+    padding-top: 20px;
+    text-align: center;
+}
+.heading span{
+    color: white;
+}
+.skills{
+    margin-left: 300px;
+    margin-top: 50px;
+}
+.skills i{
+    font-size: 50px;
+}
+
+/*----------------------------Skills logo color------------------------------------*/
+.bxl-html5{
+    color: orangered;
+    border-color: #070707;
+}
+.bxl-css3{
+    color: blue;
+    border-color: #070707;
+}
+.bxl-javascript{
+    color: yellow;
+    border-color: #070707;
+}
+.bxl-c-plus-plus{
+    color: green;
+    border-color: #070707;
+}
+.bxl-python{
+    color: yellow;
+    border-color: #070707;
+}
+/*----------------------------------------------------------------*/
+.skills h3{
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    color: white;
+    font-size: 30px;
+}
+.progress-bar{ /* bar size */
+    width: 900px;
+    height: 10px;
+    border-radius: 5px;
+}
+.progress-bar div{ /* progress bar details */
+    height: 20px;
+    border-radius: 10px;
+    width: 0%;
+}
+.progress-bar div span{
+      height:40px;
+      font-size: 25px;
+      width: 40px;
+      border-radius: 20px;
+      float: right;
+      margin-top: -40px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;   /******/
+}
+.html{ /* bar background color */
+    background: orangered;
+    /* box-shadow: 0 0 5px orangered,0 0 25px orangered; */
+    animation: html 2s linear forwards;
+    border-color: #070707 20px;
+}
+.css{  /* bar background color */
+    background: blue;
+    /* box-shadow: 0 0 5px blue,0 0 25px blue; */
+    animation: css 2s linear forwards;
+}
+.javascript{  /* bar background color */
+    background: yellow;
+    /* box-shadow: 0 0 5px yellow,0 0 25px yellow; */
+    animation: javascript 2s linear forwards;
+}
+.cplusplus{  /* bar background color */
+    background: green;
+    /* box-shadow: 0 0 5px green,0 0 25px green; */
+    animation: cplusplus 2s linear forwards;
+}
+.python{  /* bar background color */
+    background: yellow;
+    /* box-shadow: 0 0 5px yellow,0 0 25px yellow; */
+    animation: python 2s linear forwards;
+}
+.html span{
+    border: transparent;
+    font-size: 20px;
+}
+.css span{
+    border: transparent;
+    font-size: 20px;
+}
+.javascript span{
+    border: transparent;
+    font-size: 20px;
+}
+.cplusplus span{
+    border: transparent;
+    font-size: 20px;
+}
+.python span{
+    border: transparent;
+    font-size: 20px;
+}
+@keyframes html {
+    100%{
+        width:90%;
+    }
+}
+@keyframes css {
+    100%{
+        width:70%;
+    }
+}
+@keyframes javascript {
+    100%{
+        width:50%;
+    }
+}
+@keyframes cplusplus {
+    100%{
+        width:60%;
+    }
+}
+@keyframes   python {
+    100%{
+        width:90%;
+    }
+}
+
+/*.....................................................................................................*/
+.softcontainer { /* about me main container */
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.professional h2{
+    font-size: 70px;
+    margin-top: 100px;
+    margin-left: 400px;
+  
+}
+.professional h2 span{
+    color: white;
+    
+}
+#sectionlast{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    gap: 30px;
+    margin-left: 40px;
+    align-items: center;
+    
+}
+.softskills{
+    width:280px ;  /*   160*/
+    height: 280px;   /*   160*/
+    position: relative;
+}
+.outer{
+    height: 280px;   /*   160*/
+    width: 280px;    /*   160*/
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 6px 6px 10px -1px gainsboro, /* rgba(0, 0, 0, 0.15)*/
+                -6px -6px 10px -1px gainsboro;
+}
+.inner{
+    height: 240px; /*   120*/
+    width: 240px;   /*   120*/
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px gainsboro,  /* rgba(0, 0, 0, 0.2*/
+                inset -4px -4px 6px -1px gainsboro,   /* rgba(255, 255, 255, 0.7)*/
+                -0.5px -0.5px 0px gainsboro,   /* rgba(255, 255, 255, 1)*/
+                0.5px 0.5px 0px  gainsboro,      /* rgba(0,0,0,0.15))*/
+                0px 12px 10px -10px gainsboro;    /* rgba(0,0,0,0.05)*/
+} 
+.number
+{
+    font-size: 60px;
+    color:white;
+    text-align: center;
+
+}
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*.....................................................................................................*/
+#circleAB{
+    fill:none;
+    stroke: url(#GradientColorAB);
+    stroke-width:20px;
+    stroke-dasharray: 810;   /* 472  */
+    stroke-dashoffset: 810;    /* 472  */
+    animation: AB 2s linear forwards;
+    
+}
+@keyframes AB{
+100% {
+    stroke-dashoffset: 81;
+    }
+}
+/*.....................................................................................................*/
+#circleCD{
+    fill:none;
+    stroke: url(#GradientColorCD);
+    stroke-width:20px;
+    stroke-dasharray: 810;
+    stroke-dashoffset: 810;
+    animation: CD 2s linear forwards;
+}
+@keyframes CD{
+100% {
+    stroke-dashoffset: 283;
+    }
+}
+/*.....................................................................................................*/
+#circleEF{
+    fill:none;
+    stroke: url(#GradientColorEF);
+    stroke-width:20px;
+    stroke-dasharray: 810;
+    stroke-dashoffset: 810;
+    animation: EF 2s linear forwards;
+}
+@keyframes EF{
+100% {
+    stroke-dashoffset: 202;
+    }
+}
+/*.....................................................................................................*/
+#circleGH{
+    fill:none;
+    stroke: url(#GradientColorGH);
+    stroke-width:20px;
+    stroke-dasharray: 810;
+    stroke-dashoffset: 810;
+    animation: GH 2s linear forwards;
+}
+@keyframes GH{
+100% {
+    stroke-dashoffset: 121;
+    }
+}
+.circleName{
+    font-size: 23px;
+    margin-top: -50px;
+}
+/*.....................................................................................................*/
+/*   Footer part */
+
+.titlecontact{
+    font-size: 100px;
+    margin-top: 60px;
+    padding-top: 20px;
+    text-align: center;
+}
+.titlecontact span{
+    color:white;
+}
+.contactus{
+   min-height: 100vh;
+   margin-top: -50px;
+   background: #081b29;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: url(bg.jpg) no-repeat center center/cover;
+}
+.contactus form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 0px 20px black; /*rgba(0,0,0,0.5)*/
+    box-shadow: 0px 1px 20px black;
+    border-radius: 15px;
+    border-color: #070707;
+    background: white;   /* rgba(255, 255, 255, 0.1)*/
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+    
+}
+.contactus form h1{
+    color: black;
+    font-weight: 50px;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+.contactus form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid black;
+}
+.contactus form input::placeholder{
+    color: black;
+}
+.contactus form #Lastname,
+.contactus form #mobile{
+    margin-left: 20px;
+}
+.contactus form h4{
+    color: black;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+.contactus form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+    color: black;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+}
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+textarea::-webkit-scrollbar-thumb{
+    background-color: whitesmoke; 
+}
+.contactus form #button{
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: black;
+    background-color: cyan;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+    font-size: 18px;
+    border-radius: 20px  20px ;
+    box-shadow: 0 0 5px black ;
+}
+.contactus form #button:hover{
+
+    box-shadow: 0 0 5px cyan,0 0 25px cyan, 0 0 50px cyan,0 0 100px cyan,0 0 200px cyan;
+    color: black;
+}
+/*----------------------------------------------------------------*/
+.home-scifooter{
+    text-align: center;
+    margin-top: -100px;
+}
+
+.home-scifooter .github{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 0.75px solid white;
+    border-radius: 50%;
+    font-size: 25px;
+    background-color: #070707;
+    text-decoration: none;
+    color: white;
+    transition: slideLeft .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+    margin: 30px 15px 30px 0;
+    box-shadow: 0 0 5px rgb(12, 12, 12) , 0 0 25px rgb(4, 4, 4) ;
+}
+.home-scifooter .github:hover{
+   background: #070707;
+   color: white;
+   box-shadow: 0 0 20px white;
+}
+
+.home-scifooter .instagram{
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   color: white;
+   background: transparent;
+   border: 0.75px solid white;
+   border-radius: 50%;
+   font-size: 25px;
+   background-color:#f94c10;
+   text-decoration: none;
+   transition: slideLeft .5s ease forwards;
+   animation-delay: calc(.2s * var(--i));
+   margin: 30px 15px 30px 0;
+   box-shadow: 0 0 5px #f94c10 , 0 0 25px #f94c10 ;
+}
+.home-scifooter .instagram:hover{
+  background: #f94c10;
+  color: white;
+  box-shadow: 0 0 20px white;
+}
+
+.home-scifooter .whatsapp{
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   color: white;
+   background: transparent;
+   border: 0.75px solid white;
+   border-radius: 50%;
+   font-size: 25px;
+   background-color: green;
+   text-decoration: none;
+   transition: slideLeft .5s ease forwards;
+   animation-delay: calc(.2s * var(--i));
+   margin: 30px 15px 30px 0;
+   box-shadow: 0 0 5px green , 0 0 25px green ;
+}
+.home-scifooter .whatsapp:hover{
+  background: green;
+  color: white;
+  box-shadow: 0 0 20px white;
+}
+
+.home-scifooter .linkedin{
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 40px;
+   height: 40px;
+   background: transparent;
+   border: 0.75px solid white;
+   border-radius: 50%;
+   font-size: 25px;
+   background-color: #0077B5;
+   text-decoration: none;
+   color: white;
+   transition: slideLeft .5s ease forwards;
+   animation-delay: calc(.2s * var(--i));
+   margin: 30px 15px 30px 0;
+   box-shadow: 0 0 5px #0077B5 , 0 0 25px #0077B5 ;
+}
+.home-scifooter .linkedin:hover{
+  background: #0077B5;
+  color: white;
+  box-shadow: 0 0 20px white;
+}
+
