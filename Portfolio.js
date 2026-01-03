@@ -4,11 +4,12 @@ var typed = new Typed(".text", {
         "IT Graduate...",
         "Tech Enthusiast..."
     ],
-    typeSpeed: 90,
-    backSpeed: 100,
+    typespeed: 90,
+    backspeed: 100,
     backDelay: 1000,
     loop: true
 });
+
 
 
 
