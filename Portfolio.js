@@ -6,9 +6,10 @@ var typed = new Typed(".text", {
     ],
     typespeed: 90,
     backspeed: 100,
-    backDelay: 1000,
+    backDelay: 1500,
     loop: true
 });
+
 
 
 
